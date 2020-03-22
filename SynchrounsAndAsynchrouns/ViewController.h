@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <NSURLConnectionDelegate, NSURLConnectionDataDelegate>
 
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+
+- (IBAction)doSynchrouns:(UIButton *)sender;
+- (IBAction)doAsynchrouns:(UIButton *)sender;
 
 @end
 
